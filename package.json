@@ -1,0 +1,16 @@
+{
+  "name": "hs-voice-feedback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd functions && npm install && cd .. && cd widget && npm install",
+    "i": "npm install",
+    "deploy": "cd functions && npm run build && npm run deploy && cd .. && cd widget && npm run build && npm run deploy"
+  },
+  "author": "Roman Kozak",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/cli": "^5.0.2"
+  }
+}

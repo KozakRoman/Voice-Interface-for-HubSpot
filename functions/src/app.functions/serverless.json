@@ -1,0 +1,15 @@
+{
+  "runtime": "nodejs18.x",
+  "version": "1.0",
+  "secrets": ["RETELL_API_KEY", "HUB_API_KEY"],
+  "endpoints": {
+    "save-call": {
+      "method": "POST",
+      "file": "save-call.js"
+    },
+    "register-call": {
+      "method": ["GET", "POST"],
+      "file": "register-call.js"
+    }
+  }
+}

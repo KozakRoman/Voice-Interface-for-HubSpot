@@ -1,0 +1,63 @@
+{
+  "name": "kohorta-voice-feedback-app",
+  "version": "0.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --env autoupload --mode production",
+    "build": "rm -Rf dist && webpack --mode production",
+    "deploy": "rm -Rf dist && webpack --mode production && hs upload dist kohorta-voice-feedback-app",
+    "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
+    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@hubspot/cli": "^4.0.0",
+    "@hubspot/webpack-cms-plugins": "^4.0.0",
+    "autoprefixer": "^10.4.7",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^6.11.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss-loader": "^7.0.0",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "nosleep.js": "^0.12.0",
+    "postcss": "^8.4.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "regenerator-runtime": "^0.13.3",
+    "retell-client-js-sdk": "^1.3.3",
+    "webfontloader": "^1.6.28"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "last 2 versions",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

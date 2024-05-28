@@ -1,0 +1,25 @@
+{
+  "name": "feedback-AI-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@hubspot/webpack-cms-plugins": "^5.1.3",
+    "copy-webpack-plugin": "^6.0.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "start": "webpack --watch --env autoupload --mode production",
+    "build": "webpack --mode production",
+    "deploy": "hs upload dist feedback-AI-functions",
+    "lint": "eslint src && prettier --check 'src/**/*.js' 'src/**/*.json'",
+    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
+    "log": "hs logs register-call --follow"
+  },
+  "dependencies": {
+    "retell-sdk": "^3.12.0"
+  }
+}

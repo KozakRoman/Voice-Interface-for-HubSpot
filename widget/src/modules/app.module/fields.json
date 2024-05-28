@@ -1,0 +1,46 @@
+[
+  {
+    "label" : "Retell agent ID",
+    "name" : "agent_id",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  },
+  {
+    "label" : "Title",
+    "name" : "header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : true,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Voice Customer Feedback Demo"
+  },
+  {
+    "label" : "Form title",
+    "name" : "form_header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : true,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Fill in details below to start the conversation with AI interviewer"
+  },
+  {
+    "label" : "After record message",
+    "name" : "record_end_message",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : true,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "✦ Thanks for taking time to share your feedback with us ✦"
+  }
+]
