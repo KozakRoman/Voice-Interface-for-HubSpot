@@ -8,8 +8,9 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : ""
+    "default" : "PUT RETELL AGENT ID HERE"
   },
+
   {
     "label" : "Title",
     "name" : "header",
@@ -42,5 +43,19 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "default" : "✦ Thanks for taking time to share your feedback with us ✦"
+  },
+  {
+    "label" : "Product name", 
+    "name" : "product_name",
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ["MacBook Pro", "iPad Pro", "Asus Zenbook", "Dell XPS", "Surface Laptop"],
+    "occurrence": {
+      "min": 1,
+      "max": null
+    }
   }
 ]

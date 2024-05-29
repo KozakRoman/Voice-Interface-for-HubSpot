@@ -13,6 +13,7 @@ function App({ moduleData }) {
       header={moduleData.header}
       formHeader={moduleData.form_header}
       recordEndMessage={moduleData.record_end_message}
+      products={moduleData.product_name}
     />
   );
 }

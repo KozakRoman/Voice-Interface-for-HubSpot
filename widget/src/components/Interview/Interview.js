@@ -3,7 +3,13 @@ import React, { useState } from 'react';
 import { StartCallFrom } from './CallInitFrom.js';
 import InterviewRecord from './InterviewRecord.js';
 
-const Interviews = ({ agent_id, header, formHeader, recordEndMessage }) => {
+const Interviews = ({
+  agent_id,
+  header,
+  formHeader,
+  recordEndMessage,
+  products,
+}) => {
   const [interviewee, setInterviewee] = useState(null);
   const [isCallEnded, setIsCallEnded] = useState(false);
   const [call_id, setCallId] = useState(null);
@@ -25,18 +31,23 @@ const Interviews = ({ agent_id, header, formHeader, recordEndMessage }) => {
   };
 
   return (
-    <div className='kohorta-voice-feedback-app__container'>
-      <header className='kohorta-voice-feedback-app__header'>
-        <h3 className='kohorta-voice-feedback-app__title'>{header}</h3>
+    <div className="kohorta-voice-feedback-app__container">
+      <header className="kohorta-voice-feedback-app__header">
+        <h3 className="kohorta-voice-feedback-app__title">{header}</h3>
         {!interviewee && !isCallEnded && (
           <>
-            <span className='kohorta-voice-feedback-app__subtitle'>{formHeader}</span>
+            <span className="kohorta-voice-feedback-app__subtitle">
+              {formHeader}
+            </span>
           </>
         )}
       </header>
 
       {!interviewee && !isCallEnded && (
-        <StartCallFrom onSubmit={startConversationHandler} />
+        <StartCallFrom
+          onSubmit={startConversationHandler}
+          products={products}
+        />
       )}
       {interviewee && !isCallEnded && (
         <InterviewRecord
@@ -46,9 +57,9 @@ const Interviews = ({ agent_id, header, formHeader, recordEndMessage }) => {
         />
       )}
       {isCallEnded && (
-       <p className='kohorta-voice-feedback-app__goodbye'>
-        {recordEndMessage}
-      </p>
+        <p className="kohorta-voice-feedback-app__goodbye">
+          {recordEndMessage}
+        </p>
       )}
     </div>
   );
