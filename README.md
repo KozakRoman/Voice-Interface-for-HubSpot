@@ -1,9 +1,15 @@
 # Voice customer feedback – AI extension for HubSpot
 
-Before installation you would need [Retell API key](https://www.retellai.com/) and [HubSpot private APP](https://developers.hubspot.com/docs/api/private-apps) Access token with ticket scopes.
+Before installation you would need [Retell API key](https://www.retellai.com/) and [HubSpot private App](https://developers.hubspot.com/docs/api/private-apps) Access token with ticket scopes. Also, you need to [add custom properties](https://knowledge.hubspot.com/properties/create-and-edit-properties) to Tickets HubSpot CRM object. Here is the list of custom properties and corresponding data type:
+
+- retell_call_id – single-line text
+- retell_record_file – file
+- retell_call_analysys – multi-line text
+
+
 For installation you can choose **Express install** or **Granular install** instruction set.
 
-## Express Install
+## Express Installation
 
 Perform all 6 steps to install widget and serverless functions to you HubSpot portal.
 
@@ -16,7 +22,9 @@ Perform all 6 steps to install widget and serverless functions to you HubSpot po
 5. ```npm i```
 6. ```npm run deploy```
 
-## Granular install
+## Granular installation
+
+If express installation produced error try install it step by step.
 
 ### Install HubSpot cli
 
