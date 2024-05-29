@@ -52,7 +52,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : ["MacBook Pro", "iPad Pro", "Asus Zenbook", "Dell XPS", "Surface Laptop"],
+    "default" : ["iPhone 15", "Galaxy S24", "Pixel 8", "OnePlus 12", "Xiaomi 14", "Vivo X100"],
     "occurrence": {
       "min": 1,
       "max": null
